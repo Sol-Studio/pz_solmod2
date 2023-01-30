@@ -6,8 +6,10 @@
         "id": "SOL2",
         "url": "https://sol-studio.ga/"
     },
-    "modelsDir": "./models",
-    "texturesDir": "./textures",
-    "soundDir": "./sound",
-    "scriptsDir": "./scripts"
+    "modelsDir": "./src/models",
+    "texturesDir": "./src/textures",
+    "soundDir": "./src/sound",
+    "scriptsDir": "./src/scripts",
+    "translationDir": "./src/lua/shared/Translate",
+    "luaFiles": ["./src/lua/server/distributions.lua"]
 }
