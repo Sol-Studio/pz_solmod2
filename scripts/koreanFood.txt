@@ -1,0 +1,63 @@
+module SOL
+{
+    imports
+    {
+        Base
+    }
+
+    item UncookedDalgona
+	{
+		DisplayName 			= 조리되지 않은 달고나,
+        Icon                    = Dalgona,
+		DisplayCategory 		= Food,
+		Type 					= Food,
+		Weight					= 0.2,
+		Icon 					= Dalgona,
+		CantBeFrozen 			= TRUE,
+		Calories 				= 270,
+		Carbohydrates 			= 70,
+		CustomEatSound 			= Eating,
+		WorldStaticModel 		= BreadDough,
+        IsCookable              = TRUE,
+        ReplaceOnUse            = BakingPan,
+        ReplaceOnCooked         = Dalgona,
+        MinutesToCook           = 5,
+        MinutesToBurn           = 10,
+
+		HungerChange 			= -3,
+		UnhappyChange 			= 3,
+		BoredomChange 			= 1,
+	}
+
+    item Dalgona
+	{
+		DisplayName 			= 달고나,
+        Icon                    = Dalgona,
+		DisplayCategory 		= Food,
+		Type 					= Food,
+		Weight					= 0.2,
+		Icon 					= Dalgona,
+		CantBeFrozen 			= TRUE,
+		Calories 				= 270,
+		Carbohydrates 			= 70,
+		CustomEatSound 			= Eating,
+		WorldStaticModel 		= BreadDough,
+        ReplaceOnUse            = BakingPan,
+
+		HungerChange 			= -3,
+		UnhappyChange 			= -15,
+		BoredomChange 			= -15,
+        StressChange            = -10,
+	}
+
+    recipe 달고나 만들기
+    {
+        BakingSoda = 1,
+        Sugar/SugarBrown = 1,
+        destroy BakingPan,
+
+        Result: UncookedDalgona,
+        Time: 80.0,
+        Category: kfood,
+    }
+}

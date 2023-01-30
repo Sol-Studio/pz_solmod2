@@ -1,0 +1,44 @@
+module SOL
+{
+    imports 
+    {
+        Base
+    }
+    
+	item simpleWaterPurifier
+	{
+        DisplayCategory     = WaterPurifier,
+		Weight	            = 1.0,
+		Type	            = Normal,
+		DisplayName	        = 단순한 정수기,
+		Icon	            = simpleWaterPurifier,
+		StaticModel         = WaterBottle,
+		WorldStaticModel    = WaterBottleEmpty,
+	}
+
+    recipe 단순한 정수기 만들기 
+    {
+        destroy PopBottleEmpty/WaterBottleEmpty,
+        Sandbag     = 2,
+        Gravelbag   = 1,
+        RippedSheets,
+
+        Result: simpleWaterPurifier,
+        Time: 100,
+        Category: 정수,
+    }
+
+    recipe 물 정수하기 (단순한 정수기)
+    {
+        keep WaterBleachBottle/WaterBowl/BucketWaterFull/WaterPot/GardeningSprayFull/FullKettle/WaterMug/WaterSaucepan/WaterTeacup/WaterBottleFull/BeerWaterFull/WhiskeyWaterFull/MayonnaiseWaterFull/WaterPopBottle/RemouladeWaterFull/WineWaterFull/WateredCanFull,
+        keep simpleWaterPurifier,
+        Time:50.0,
+        OnCreate:SOL_Purify_Water_Container,
+        OnTest:SOL_Is_Tainted_Water,
+        Category:정수,
+        Prop1:Source=2,
+        Prop2:Source=1,
+        Result:WaterBottleFull,
+        RemoveResultItem:true,
+    }
+}

@@ -1,0 +1,4 @@
+Sandbox_KO = {
+	Sandbox_VitaminsHeal_Percentage = "비타민 치유량 (%)",
+	Sandbox_VitaminsHeal_Percentage_tooltip = "실제 치유량은 당신의 상태에 따라 크게 차이날 수 있습니다."
+}

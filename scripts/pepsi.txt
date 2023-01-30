@@ -1,0 +1,38 @@
+module SOL
+{
+	imports
+	{
+		Base
+	}
+
+	item PepsiCola
+	{
+		DisplayName 			= 펩시콜라,
+		DisplayCategory 		= Food,
+		Type 					= Food,
+		Weight					= 0.3,
+		Icon 					= PepsiCola,
+		FoodType 				= SoftDrink,
+		CantBeFrozen 			= TRUE,
+		EatType 				= popcan,
+		Packaged 				= TRUE,
+		ReplaceOnUse 			= PopEmpty,
+		Calories 				= 140,
+		Carbohydrates 			= 39,
+		Lipids 					= 0,
+		Proteins 				= 0,
+		CustomContextMenu 		= Drink,
+		CustomEatSound 			= DrinkingFromCan,
+		StaticModel 			= PopCanDiet,
+		WorldStaticModel 		= PopCanDiet,
+		Tags 					= HasMetal,
+
+		HungerChange 			= -100,
+		ThirstChange 			= -100,
+		UnhappyChange 			= -100,
+		StressChange 			= -100,
+		BoredomChange 			= -100,
+		FatigueChange 			= -100,
+		EnduranceChange 		= 100,
+	}
+}

@@ -1,0 +1,15 @@
+module Base
+{
+    item PillsVitamins
+    {
+		Weight			    = 0.2,
+        UseDelta		    = 0.1,
+		Type			    = Drainable,
+		UseWhileEquipped	= FALSE,
+		DisplayName		    = Vitamins,
+		Icon			    = Vitamins,
+		Tooltip 		    = Tooltip_SOL_Vitamins,
+        StaticModel         = PillBottle,
+		Medical             = TRUE,
+    }
+}

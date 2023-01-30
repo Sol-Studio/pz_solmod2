@@ -1,0 +1,3 @@
+Tooltip_KO = {
+    Tooltip_SOL_Vitamins = "[효능] 몸 상태를 회복시켜줍니다."
+}

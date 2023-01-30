@@ -1,0 +1,13 @@
+{
+    "modInfo": {
+        "name": "SOL MOD 2",
+        "poster": "./poster.png",
+        "description": "솔 모드 2",
+        "id": "SOL2",
+        "url": "https://sol-studio.ga/"
+    },
+    "modelsDir": "./models",
+    "texturesDir": "./textures",
+    "soundDir": "./sound",
+    "scriptsDir": "./scripts"
+}
